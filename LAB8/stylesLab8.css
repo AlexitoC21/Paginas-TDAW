@@ -1,0 +1,125 @@
+/* 1: Flex básico */
+.e1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /*<--- Este coso es del ejercicio 2 xd*/ 
+}
+.e1 div {
+  padding: 10px;
+}
+
+/* 2: Dirección de Flex y Wrap */
+.e1 div {
+    padding: 10px;
+    background: #ddd;
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .e1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* 3: Menú responsive */
+.e2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+}
+.e2 a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+
+@media (max-width: 500px) {
+    .e2 {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+
+    .e2 a {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+
+/* 4: Tarjetas flexibles */
+.tarjetas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    flex: 1;
+    min-width: 200px;
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.card img {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+/* 5: Layout completo */
+layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  border: 2px solid #444;
+}
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  height: 80px;
+  flex-shrink: 0;
+}
+main {
+  display: flex;
+  flex: 1;
+}
+aside {
+  background-color: #ddd;
+  width: 200px;
+  flex-shrink: 0;
+  padding: 20px;
+}
+section.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fafafa;
+}
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+  }
+}
+
+
